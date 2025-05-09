@@ -26,9 +26,8 @@ const PaymentProcessWrapper = ({ ride, passengerCount, onPaymentComplete }: Paym
   // Create mock passenger details based on count
   const mockPassengerDetails: PassengerDetail[] = Array(passengerCount).fill(null).map((_, index) => ({
     name: `Passenger ${index + 1}`,
-    aadhaarNumber: '123456789012',
-    phone: '9876543210',
-    email: `passenger${index + 1}@example.com`
+    age: 30, // Adding required age property
+    gender: 'male' // Adding required gender property
   }));
   
   return (
@@ -44,3 +43,4 @@ const PaymentProcessWrapper = ({ ride, passengerCount, onPaymentComplete }: Paym
 };
 
 export default PaymentProcessWrapper;
+

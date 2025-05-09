@@ -506,7 +506,7 @@ const Dashboard: React.FC<DashboardProps> = ({ userType }) => {
                             from: destination.from, 
                             to: destination.to 
                           }));
-                          window.location.reload();
+                          navigate('/all-routes');
                         }}
                       >
                         {currentUser.role === 'passenger' ? 'Find Rides' : 'Offer Ride'}
@@ -618,6 +618,8 @@ const Dashboard: React.FC<DashboardProps> = ({ userType }) => {
 };
 
 export default Dashboard;
+
+
 
 
 

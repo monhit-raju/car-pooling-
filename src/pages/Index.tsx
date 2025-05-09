@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { popularDestinations } from '@/data/destinations';
+import { isAuthenticated } from '@/lib/auth';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -124,13 +125,7 @@ const Index = () => {
   };
   
   const handleExploreAllRoutes = () => {
-    // Check if user is logged in
-    const userStr = localStorage.getItem('elitecars_current_user');
-    if (!userStr) {
-      navigate('/signin');
-    } else {
-      navigate('/dashboard');
-    }
+    navigate('/all-routes');
   };
   
   // If a route is selected, display route details page
@@ -365,4 +360,12 @@ const Index = () => {
 };
 
 export default Index;
+
+
+
+
+
+
+
+
 

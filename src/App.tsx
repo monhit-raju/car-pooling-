@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/Dashboard";
+import AllRoutes from "./pages/AllRoutes";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Admin from "./pages/Admin";
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/register" element={<SignIn initialMode="register" />} />
+            <Route path="/all-routes" element={<AllRoutes />} />
             <Route path="/dashboard" element={
               <ProtectedRoute>
                 <Dashboard />
@@ -55,6 +57,7 @@ const App = () => (
 );
 
 export default App;
+
 
 
 
